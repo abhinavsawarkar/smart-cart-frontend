@@ -5,7 +5,7 @@ import AppWrapper from '../UI/AppWrapper';
 
 
 const Login = () => {
-  const [userPhoneNumber , setUserPhoneNumber] = useState();
+  // const [userPhoneNumber , setUserPhoneNumber] = useState();
 
   const auth = getAuth()
   useEffect(()=>{
@@ -46,7 +46,8 @@ const Login = () => {
     .then(confirmationResult=>{
       console.log("Success")
       window.open("/cart" , "_self")
-      setUserPhoneNumber(confirmationResult.user.phoneNumber)
+      // setUserPhoneNumber(confirmationResult.user.phoneNumber)
+      console.log(confirmationResult.user.phoneNumber)
     }).catch(error=>{
       alert(error.message)
     })
@@ -60,8 +61,10 @@ const Login = () => {
     }
   })
 
-  const API_KEY = "rzp_test_dFOoUBRUEtekR3"
-  const API_SECRET = "5qDs8PpurcM6FbJBdEfFaBNw"
+  console.log(user)
+
+  // const API_KEY = "rzp_test_dFOoUBRUEtekR3"
+  // const API_SECRET = "5qDs8PpurcM6FbJBdEfFaBNw"
 
   return (
     <AppWrapper>
