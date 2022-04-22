@@ -2,7 +2,7 @@ import React from 'react'
 import Button from '../UI/Button'
 
 // Phone Input Component
-const PhoneInput = ({loginSubmit})=>{
+const PhoneInput = ({loginSubmit })=>{
     return (
         <FormWrapper>
             <form id="loginForm" onSubmit={loginSubmit}>
@@ -11,7 +11,7 @@ const PhoneInput = ({loginSubmit})=>{
                     <input className="p-1 text-sm text-black outline-none" type="text" placeholder="Phone Number" name="phone" autoComplete='false' />
                 </div>
 
-                <Button type="submit" id="signInButton" text="Sign In" />
+                <Button type="submit" id="signInButton" text="Sign In"/>
             </form>
         </FormWrapper>
     )
@@ -36,7 +36,7 @@ const FormWrapper = (props) =>{
 )
 }
 
-const Form = ({loginSubmit , otpSubmit , viewOtpForm=true}) => {
+const Form = ({loginSubmit , otpSubmit , viewOtpForm=true , signInLoading}) => {
   return (
     <div className='basis-3/4 flex flex-col pt-10 landscape:basis-full'>
         <h1 className='text-center font-semibold text-xl'>Sign In</h1>
